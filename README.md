@@ -117,5 +117,48 @@ exit 0
 ```
 2. Проверка работоспособности скрипта<br/>
 ```shell
+./ps_custom.sh | head -n 20
+PID	TTY	STAT	TIME	COMMAND
+1		S	19:37	init
+2		S	0:00	[kthreadd]
+3		S	0:00	[pool_workqueue_release]
+4		I	0:00	[kworker/R-rcu_g]
+5		I	0:00	[kworker/R-rcu_p]
+6		I	0:00	[kworker/R-slub_]
+7		I	0:00	[kworker/R-netns]
+9		I	0:00	[kworker/0:0H-events_highpri]
+10		I	0:00	[kworker/0:1-events]
+12		I	0:00	[kworker/R-mm_pe]
+14		I	0:00	[rcu_tasks_kthread]
+15		I	0:00	[rcu_tasks_rude_kthread]
+16		I	0:00	[rcu_tasks_trace_kthread]
+17		S	0:00	[ksoftirqd/0]
+18		I	0:00	[rcu_preempt]
+19		S	0:00	[migration/0]
+20		S	0:00	[idle_inject/0]
+21		S	0:00	[cpuhp/0]
+22		S	0:00	[cpuhp/1]
+
+./ps_custom.sh | tail -n 20
+5022		S	0:01	/opt/vscode/code
+5032		S	0:19	/opt/vscode/code
+5033		S	0:01	/opt/vscode/code
+5239	pts/2	S	0:00	bash
+5270		S	0:05	/usr/lib64/firefox/firefox-contentproc-childID17-isForBrowser-prefsLen30660-prefMapSize242233-jsInitLen235388-parentBuildID20240207140857-greomni/usr/lib64/firefox/omni.ja-appomni/usr/lib64/firefox/browser/omni.ja-appDir/usr/lib64/firefox/browser{107504f7-9b9b-41f8-9891-85c865b53cdf}4014tab
+5316		S	0:02	/usr/lib64/firefox/firefox-contentproc-childID18-isForBrowser-prefsLen30660-prefMapSize242233-jsInitLen235388-parentBuildID20240207140857-greomni/usr/lib64/firefox/omni.ja-appomni/usr/lib64/firefox/browser/omni.ja-appDir/usr/lib64/firefox/browser{bbda49f1-920d-4627-b815-f71a6441851f}4014tab
+5525		S	0:00	/usr/lib64/firefox/firefox-contentproc-childID20-isForBrowser-prefsLen30660-prefMapSize242233-jsInitLen235388-parentBuildID20240207140857-greomni/usr/lib64/firefox/omni.ja-appomni/usr/lib64/firefox/browser/omni.ja-appDir/usr/lib64/firefox/browser{c0745f20-5c33-45f7-b4c1-07d861233d4a}4014tab
+5663		S	0:00	/usr/lib64/firefox/firefox-contentproc-childID21-isForBrowser-prefsLen30756-prefMapSize242233-jsInitLen235388-parentBuildID20240207140857-greomni/usr/lib64/firefox/omni.ja-appomni/usr/lib64/firefox/browser/omni.ja-appDir/usr/lib64/firefox/browser{edc7a189-f359-47b3-a53b-b197a449a704}4014tab
+6141		I	0:00	[kworker/5:0-events]
+6281		I	0:00	[kworker/3:1-inet_frag_wq]
+6350		I	0:00	[kworker/u16:3-btrfs-endio-write]
+6534		I	0:00	[kworker/4:2-events]
+6551		I	0:00	[kworker/6:1]
+6939		S	0:00	/usr/libexec/gvfsd-http--spawner:1.1/org/gtk/gvfs/exec_spaw/1
+6977		S	0:00	/usr/lib64/firefox/firefox-contentproc-childID22-isForBrowser-prefsLen30756-prefMapSize242233-jsInitLen235388-parentBuildID20240207140857-greomni/usr/lib64/firefox/omni.ja-appomni/usr/lib64/firefox/browser/omni.ja-appDir/usr/lib64/firefox/browser{bd320de3-12ba-41d5-88f3-a72263c86135}4014tab
+7005		I	0:00	[kworker/2:1-events]
+7006		I	0:00	[kworker/1:0]
+7038		I	0:00	[kworker/u16:0-events_unbound]
+7047		I	0:00	[kworker/u16:1-flush-btrfs-1]
+7074		I	0:00	[kworker/u16:4-btrfs-endio-write]
 
 ```
