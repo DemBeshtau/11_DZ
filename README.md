@@ -115,3 +115,7 @@ echo -e "PID\tTTY\tSTAT\tTIME\tCOMMAND"
 echo -en "$total" | sort -g
 exit 0
 ```
+2. Проверка работоспособности скрипта<br/>
+```shell
+
+```
